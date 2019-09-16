@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ruleset name="helbing-ruleset">
+    <file>app</file>
+    <file>config</file>
+    <file>routes</file>
+    <file>tests</file>
+    <exclude-pattern>*/_ide_helper.php</exclude-pattern>
+    <exclude-pattern>vendor/*</exclude-pattern>
+    <exclude-pattern>database/*</exclude-pattern>
+    <exclude-pattern>public/*</exclude-pattern>
+    <arg name="report" value="summary" />
+    <arg name="colors" />
+    <arg value="p" />
+    <ini name="memory_limit" value="2048M" />
+    <rule ref="PSR2" />
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="256" />
+            <property name="absoluteLineLimit" value="256" />
+        </properties>
+    </rule>
+</ruleset>
